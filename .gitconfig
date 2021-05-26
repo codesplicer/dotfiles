@@ -1,0 +1,63 @@
+[push]
+	default = simple
+[user]
+	name = Vik Bhatti
+	email = vik@vikbhatti.com
+[alias]
+	co = checkout
+	d = diff
+	dc = diff --cached
+	l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = ~/.gitignore
+	autocrlf = input
+	editor = code --wait
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[web]
+  browser = google-chrome
+[credential]
+  helper = osxkeychain
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[protocol]
+	version = 2
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
